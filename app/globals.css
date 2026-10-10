@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+}
+
+:root { color-scheme: light; }
+html, body { background: #f4f6f5; color: #1c2321; }
+body { -webkit-tap-highlight-color: transparent; overscroll-behavior-y: contain; }
+input, select, textarea { font-size: 16px; } /* stops iPhone zooming into fields */
+
+.card { @apply rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5; }
+.btn { @apply inline-flex items-center justify-center gap-1 rounded-xl bg-brand px-4 py-2.5 font-medium text-white active:bg-brand-dark disabled:opacity-50; }
+.btn-ghost { @apply inline-flex items-center justify-center gap-1 rounded-xl px-3 py-2 font-medium text-brand ring-1 ring-brand/30 active:bg-brand/5 disabled:opacity-50; }
+.btn-danger { @apply inline-flex items-center justify-center gap-1 rounded-xl px-3 py-2 font-medium text-red-700 ring-1 ring-red-200 active:bg-red-50; }
+.field { @apply w-full rounded-xl border border-gray-300 bg-white px-3 py-2.5 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20; }
+.label { @apply mb-1 block text-sm font-medium text-gray-700; }
+.muted { @apply text-sm text-gray-500; }
+.h1 { @apply text-xl font-semibold; }
+.h2 { @apply text-base font-semibold; }
+.pill { @apply inline-block rounded-full px-2 py-0.5 text-xs font-medium; }
+.num { font-variant-numeric: tabular-nums; }
+
+@layer base {
+  *, ::before, ::after { border-color: #e5e7eb; }
+}
+.hero { @apply rounded-2xl p-4 text-white shadow-sm; }
